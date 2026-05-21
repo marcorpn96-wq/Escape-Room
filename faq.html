@@ -1,0 +1,267 @@
+﻿<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/Escape-Room/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/Escape-Room/tailwind-config.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/Escape-Room/shared.css" />
+  <title>FAQ — Secret Room Pescara</title>
+  <script type="module" crossorigin src="/Escape-Room/assets/main-BLX8bd1N.js"></script>
+  <link rel="stylesheet" crossorigin href="/Escape-Room/assets/main-U2HOBIVy.css">
+</head>
+<body class="overflow-x-hidden text-white bg-black">
+
+  <!-- HEADER -->
+  <header class="fixed top-0 z-50 w-full bg-black border-b border-red-900 bg-opacity-90">
+    <div class="flex items-center justify-between px-4 py-4 mx-auto max-w-7xl">
+      <a href="./"><img src="/Escape-Room/img/logo-sito-ridimensionato.png" alt="Secret Room" class="h-16 cursor-pointer" /></a>
+      <nav class="hidden gap-6 font-semibold text-red-500 md:flex">
+        <a href="./" class="transition hover:text-red-300">Home</a>
+        <a href="./stanze.html" class="transition hover:text-red-300">Stanze</a>
+        <a href="./prenotazione.html" class="transition hover:text-red-300">Prenotazione</a>
+        <a href="./classifica.html" class="transition hover:text-red-300">Classifica</a>
+        <a href="./faq.html" class="text-white transition hover:text-red-300">FAQ</a>
+      </nav>
+      <button class="text-2xl text-red-500 md:hidden" onclick="document.getElementById('mob-menu').classList.toggle('hidden')">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+    <div id="mob-menu" class="hidden px-4 py-4 bg-black border-t border-red-900 md:hidden">
+      <nav class="flex flex-col gap-4 font-semibold text-red-500">
+        <a href="./" class="transition hover:text-red-300">Home</a>
+        <a href="./stanze.html" class="transition hover:text-red-300">Stanze</a>
+        <a href="./prenotazione.html" class="transition hover:text-red-300">Prenotazione</a>
+        <a href="./classifica.html" class="transition hover:text-red-300">Classifica</a>
+        <a href="./faq.html" class="transition hover:text-red-300">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mt-20">
+
+    <!-- HERO -->
+    <section class="relative flex items-center justify-center w-full h-64 overflow-hidden">
+      <img src="/Escape-Room/img/Escape-Room.jpg" alt="" class="absolute inset-0 object-cover w-full h-full opacity-20">
+      <div class="relative z-10 px-4 text-center">
+        <p class="mb-2 text-sm tracking-widest text-red-500 uppercase">Hai domande?</p>
+        <h1 class="text-5xl font-bold md:text-6xl neon-text">Domande Frequenti</h1>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="max-w-3xl px-8 py-16 mx-auto">
+
+      <!-- Categoria: Prima della sessione -->
+      <h2 class="flex items-center gap-3 mb-6 text-xl font-bold tracking-widest text-red-700 uppercase">
+        <i class="fa-solid fa-circle-question"></i> Prima della sessione
+      </h2>
+
+      <div class="mb-12 space-y-3">
+
+        <div class="overflow-hidden bg-gray-900 border border-red-900 rounded-lg faq-item">
+          <button class="flex items-center justify-between w-full p-5 text-left transition hover:bg-gray-800" onclick="toggleFaq(this)">
+            <span class="font-bold text-white">Le porte sono davvero chiuse a chiave?</span>
+            <i class="flex-shrink-0 ml-4 text-red-500 fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p class="px-5 pb-5 text-sm leading-relaxed text-gray-300">No, per motivi di sicurezza le porte d'ingresso sono sempre apribili dall'interno. Il gioco consiste nel trovare l'uscita "narrativa" prima dello scadere del tempo, non nell'essere fisicamente intrappolati.</p>
+          </div>
+        </div>
+
+        <div class="overflow-hidden bg-gray-900 border border-red-900 rounded-lg faq-item">
+          <button class="flex items-center justify-between w-full p-5 text-left transition hover:bg-gray-800" onclick="toggleFaq(this)">
+            <span class="font-bold text-white">Con quante persone si può giocare?</span>
+            <i class="flex-shrink-0 ml-4 text-red-500 fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p class="px-5 pb-5 text-sm leading-relaxed text-gray-300">Dipende dalla stanza: Il Clown accetta da 2 a 10 persone, Il Signore Oscuro da 2 a 8, The Nun da 2 a 6. In tutti i casi il minimo è 2 partecipanti. Ricorda: con 4 o più persone ottieni uno sconto del 20%!</p>
+          </div>
+        </div>
+
+        <div class="overflow-hidden bg-gray-900 border border-red-900 rounded-lg faq-item">
+          <button class="flex items-center justify-between w-full p-5 text-left transition hover:bg-gray-800" onclick="toggleFaq(this)">
+            <span class="font-bold text-white">C'è un'età minima per partecipare?</span>
+            <i class="flex-shrink-0 ml-4 text-red-500 fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p class="px-5 pb-5 text-sm leading-relaxed text-gray-300">Le stanze horror (Il Clown e The Nun) richiedono almeno 16 anni. Il Signore Oscuro, di tipo fantasy, è accessibile dai 14 anni. I minori devono sempre essere accompagnati da un adulto responsabile.</p>
+          </div>
+        </div>
+
+        <div class="overflow-hidden bg-gray-900 border border-red-900 rounded-lg faq-item">
+          <button class="flex items-center justify-between w-full p-5 text-left transition hover:bg-gray-800" onclick="toggleFaq(this)">
+            <span class="font-bold text-white">Quando devo arrivare?</span>
+            <i class="flex-shrink-0 ml-4 text-red-500 fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p class="px-5 pb-5 text-sm leading-relaxed text-gray-300">Ti chiediamo di presentarti almeno 15 minuti prima dell'orario prenotato. Questo tempo serve per il briefing iniziale, la firma del modulo di partecipazione e per permettervi di ambientarvi prima di entrare nella stanza.</p>
+          </div>
+        </div>
+
+        <div class="overflow-hidden bg-gray-900 border border-red-900 rounded-lg faq-item">
+          <button class="flex items-center justify-between w-full p-5 text-left transition hover:bg-gray-800" onclick="toggleFaq(this)">
+            <span class="font-bold text-white">Posso prenotare per un evento di gruppo o compleanno?</span>
+            <i class="flex-shrink-0 ml-4 text-red-500 fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p class="px-5 pb-5 text-sm leading-relaxed text-gray-300">Assolutamente sì! Organizziamo sessioni private per compleanni, addii al celibato/nubilato, team building aziendali e altri eventi. Contattaci direttamente per pacchetti personalizzati e tariffe dedicate ai gruppi numerosi.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Categoria: Durante la sessione -->
+      <h2 class="flex items-center gap-3 mb-6 text-xl font-bold tracking-widest text-red-700 uppercase">
+        <i class="fa-regular fa-clock"></i> Durante la sessione
+      </h2>
+
+      <div class="mb-12 space-y-3">
+
+        <div class="overflow-hidden bg-gray-900 border border-red-900 rounded-lg faq-item">
+          <button class="flex items-center justify-between w-full p-5 text-left transition hover:bg-gray-800" onclick="toggleFaq(this)">
+            <span class="font-bold text-white">Cosa succede se non usciamo in tempo?</span>
+            <i class="flex-shrink-0 ml-4 text-red-500 fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p class="px-5 pb-5 text-sm leading-relaxed text-gray-300">Il Game Master vi aprirà la stanza al termine dei 60 minuti e vi spiegherà la soluzione degli enigmi rimasti. Non vi preoccupate: la maggior parte dei team alla prima esperienza non riesce a completarla, e fa parte del divertimento!</p>
+          </div>
+        </div>
+
+        <div class="overflow-hidden bg-gray-900 border border-red-900 rounded-lg faq-item">
+          <button class="flex items-center justify-between w-full p-5 text-left transition hover:bg-gray-800" onclick="toggleFaq(this)">
+            <span class="font-bold text-white">Possiamo chiedere suggerimenti?</span>
+            <i class="flex-shrink-0 ml-4 text-red-500 fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p class="px-5 pb-5 text-sm leading-relaxed text-gray-300">Sì! Il Game Master monitora la vostra sessione dall'esterno e potete richiedere fino a 3 suggerimenti durante il gioco. Ogni suggerimento però aggiunge 5 minuti al vostro tempo ufficiale se volete registrarlo in classifica.</p>
+          </div>
+        </div>
+
+        <div class="overflow-hidden bg-gray-900 border border-red-900 rounded-lg faq-item">
+          <button class="flex items-center justify-between w-full p-5 text-left transition hover:bg-gray-800" onclick="toggleFaq(this)">
+            <span class="font-bold text-white">Gli attori ci toccheranno fisicamente?</span>
+            <i class="flex-shrink-0 ml-4 text-red-500 fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p class="px-5 pb-5 text-sm leading-relaxed text-gray-300">Mai. I nostri attori seguono un rigoroso codice di condotta: possono avvicinarsi, parlare, fare rumori o muoversi in modo scenografico, ma non toccano mai i partecipanti. La vostra sicurezza fisica è la nostra priorità assoluta.</p>
+          </div>
+        </div>
+
+        <div class="overflow-hidden bg-gray-900 border border-red-900 rounded-lg faq-item">
+          <button class="flex items-center justify-between w-full p-5 text-left transition hover:bg-gray-800" onclick="toggleFaq(this)">
+            <span class="font-bold text-white">Posso portare il telefono dentro?</span>
+            <i class="flex-shrink-0 ml-4 text-red-500 fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p class="px-5 pb-5 text-sm leading-relaxed text-gray-300">I telefoni devono essere spenti o in modalità silenziosa. Non è consentito fare foto o video all'interno delle stanze per mantenere la sorpresa per i futuri giocatori. Potrete fare foto nell'area di ingresso prima e dopo la sessione.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Categoria: Prenotazione e pagamento -->
+      <h2 class="flex items-center gap-3 mb-6 text-xl font-bold tracking-widest text-red-700 uppercase">
+        <i class="fa-solid fa-credit-card"></i> Prenotazione e pagamento
+      </h2>
+
+      <div class="mb-12 space-y-3">
+
+        <div class="overflow-hidden bg-gray-900 border border-red-900 rounded-lg faq-item">
+          <button class="flex items-center justify-between w-full p-5 text-left transition hover:bg-gray-800" onclick="toggleFaq(this)">
+            <span class="font-bold text-white">Come posso pagare?</span>
+            <i class="flex-shrink-0 ml-4 text-red-500 fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p class="px-5 pb-5 text-sm leading-relaxed text-gray-300">Il pagamento avviene in loco, direttamente alla nostra reception. Accettiamo contanti, carte di credito/debito (Visa, Mastercard) e pagamenti contactless. Non è richiesto alcun anticipo online per confermare la prenotazione.</p>
+          </div>
+        </div>
+
+        <div class="overflow-hidden bg-gray-900 border border-red-900 rounded-lg faq-item">
+          <button class="flex items-center justify-between w-full p-5 text-left transition hover:bg-gray-800" onclick="toggleFaq(this)">
+            <span class="font-bold text-white">Posso cancellare la prenotazione?</span>
+            <i class="flex-shrink-0 ml-4 text-red-500 fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p class="px-5 pb-5 text-sm leading-relaxed text-gray-300">La cancellazione è gratuita fino a 24 ore prima dell'orario prenotato. Cancellazioni tardive o mancate presentazioni senza preavviso potrebbero essere soggette a una piccola penale. Per cancellare o modificare, basta chiamarci.</p>
+          </div>
+        </div>
+
+        <div class="overflow-hidden bg-gray-900 border border-red-900 rounded-lg faq-item">
+          <button class="flex items-center justify-between w-full p-5 text-left transition hover:bg-gray-800" onclick="toggleFaq(this)">
+            <span class="font-bold text-white">Come funziona lo sconto gruppo?</span>
+            <i class="flex-shrink-0 ml-4 text-red-500 fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p class="px-5 pb-5 text-sm leading-relaxed text-gray-300">Con 4 o più partecipanti, il prezzo a persona si riduce del 20% automaticamente. Lo sconto viene calcolato sul totale al momento del pagamento. Non è cumulabile con altre promozioni.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA -->
+      <div class="p-8 text-center bg-gray-900 rounded-lg neon-border">
+        <p class="mb-2 text-gray-400">Non hai trovato risposta alla tua domanda?</p>
+        <h3 class="mb-6 text-2xl font-bold text-red-500">Contattaci direttamente</h3>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="tel:+390850000000" class="px-6 py-3 font-bold text-white transition bg-red-700 rounded hover:bg-red-600">
+            <i class="mr-2 fa-solid fa-phone"></i> Chiamaci
+          </a>
+          <a href="mailto:info@secretroom.it" class="px-6 py-3 font-bold text-red-500 transition border-2 border-red-700 rounded hover:bg-red-700 hover:text-white">
+            <i class="mr-2 fa-solid fa-envelope"></i> Scrivici
+          </a>
+          <a href="./prenotazione.html" class="px-6 py-3 font-bold text-white transition bg-gray-800 rounded hover:bg-gray-700">
+            <i class="mr-2 fa-solid fa-calendar-check"></i> Prenota ora
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="mt-8 text-sm bg-gray-900 border-t border-red-900">
+    <div class="grid grid-cols-1 gap-10 px-8 py-12 mx-auto max-w-7xl md:grid-cols-4">
+      <div class="flex flex-col gap-4">
+        <img src="/Escape-Room/img/logo-sito-ridimensionato.png" alt="Secret Room" class="w-32">
+        <p class="leading-relaxed text-gray-300">L'escape room più adrenalinica di Pescara. Scenografie cinematografiche, attori dal vivo, emozioni reali.</p>
+      </div>
+      <div>
+        <h4 class="mb-4 text-base font-bold text-red-500 uppercase">Esplora</h4>
+        <ul class="space-y-2 text-gray-300">
+          <li><a href="./" class="transition hover:text-red-400">Home</a></li>
+          <li><a href="./stanze.html" class="transition hover:text-red-400">Le Stanze</a></li>
+          <li><a href="./prenotazione.html" class="transition hover:text-red-400">Prenota</a></li>
+          <li><a href="./classifica.html" class="transition hover:text-red-400">Classifica</a></li>
+          <li><a href="./faq.html" class="transition hover:text-red-400">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mb-4 text-base font-bold text-red-500 uppercase">Contatti</h4>
+        <ul class="space-y-3 text-gray-300">
+          <li class="flex items-start gap-2"><i class="mt-1 text-red-700 fa-solid fa-location-dot"></i><span>Via Roma 42, 65100 Pescara PE</span></li>
+          <li class="flex items-center gap-2"><i class="text-red-700 fa-solid fa-phone"></i><span>+39 085 000 0000</span></li>
+          <li class="flex items-center gap-2"><i class="text-red-700 fa-solid fa-envelope"></i><span>info@secretroom.it</span></li>
+          <li class="flex items-center gap-2"><i class="text-red-700 fa-regular fa-clock"></i><span>Lun-Dom: 15:00 – 23:00</span></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mb-4 text-base font-bold text-red-500 uppercase">Seguici</h4>
+        <div class="flex gap-4 text-2xl">
+          <a href="#" class="text-gray-300 transition hover:text-red-400"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="text-gray-300 transition hover:text-red-400"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="text-gray-300 transition hover:text-red-400"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" class="text-gray-300 transition hover:text-red-400"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="py-4 text-center text-gray-500 border-t border-red-900">
+      <p>&copy; 2026 S·E·C·R·E·T ROOM — Esame Finale Infobasic. Tutti i diritti riservati.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

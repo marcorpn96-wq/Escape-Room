@@ -1,0 +1,170 @@
+﻿<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/Escape-Room/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/Escape-Room/tailwind-config.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/Escape-Room/shared.css" />
+  <title>Classifica — Secret Room Pescara</title>
+  <script type="module" crossorigin src="/Escape-Room/assets/main-BLX8bd1N.js"></script>
+  <link rel="stylesheet" crossorigin href="/Escape-Room/assets/main-U2HOBIVy.css">
+</head>
+<body class="overflow-x-hidden text-white bg-black">
+
+  <!-- HEADER -->
+  <header class="fixed top-0 z-50 w-full bg-black border-b border-red-900 bg-opacity-90">
+    <div class="flex items-center justify-between px-4 py-4 mx-auto max-w-7xl">
+      <a href="./"><img src="/Escape-Room/img/logo-sito-ridimensionato.png" alt="Secret Room" class="h-16 cursor-pointer" /></a>
+      <nav class="hidden gap-6 font-semibold text-red-500 md:flex">
+        <a href="./" class="transition hover:text-red-300">Home</a>
+        <a href="./stanze.html" class="transition hover:text-red-300">Stanze</a>
+        <a href="./prenotazione.html" class="transition hover:text-red-300">Prenotazione</a>
+        <a href="./classifica.html" class="text-white transition hover:text-red-300">Classifica</a>
+        <a href="./faq.html" class="transition hover:text-red-300">FAQ</a>
+      </nav>
+      <button class="text-2xl text-red-500 md:hidden" onclick="document.getElementById('mob-menu').classList.toggle('hidden')">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+    <div id="mob-menu" class="hidden px-4 py-4 bg-black border-t border-red-900 md:hidden">
+      <nav class="flex flex-col gap-4 font-semibold text-red-500">
+        <a href="./" class="transition hover:text-red-300">Home</a>
+        <a href="./stanze.html" class="transition hover:text-red-300">Stanze</a>
+        <a href="./prenotazione.html" class="transition hover:text-red-300">Prenotazione</a>
+        <a href="./classifica.html" class="transition hover:text-red-300">Classifica</a>
+        <a href="./faq.html" class="transition hover:text-red-300">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mt-20">
+
+    <!-- HERO -->
+    <section class="relative flex items-center justify-center w-full h-64 overflow-hidden">
+      <img src="/Escape-Room/img/Escape-Room.jpg" alt="" class="absolute inset-0 object-cover w-full h-full opacity-20">
+      <div class="relative z-10 px-4 text-center">
+        <p class="mb-2 text-sm tracking-widest text-red-500 uppercase">I migliori sopravvissuti</p>
+        <h1 class="text-5xl font-bold md:text-6xl neon-text">Hall of Fame</h1>
+      </div>
+    </section>
+
+    <section class="max-w-5xl px-8 py-16 mx-auto">
+
+      <!-- FILTRO + TABELLA -->
+      <div class="p-6 mb-12 bg-gray-900 rounded-lg neon-border">
+        <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+          <h2 class="text-xl font-bold text-red-500">Classifica Completa</h2>
+          <select id="filterRoom" onchange="renderLeaderboard()"
+            class="p-2 text-sm text-white bg-black border border-red-500 rounded focus:outline-none">
+            <option value="all">Tutte le stanze</option>
+            <option value="Il Clown">Il Clown</option>
+            <option value="Il Signore Oscuro">Il Signore Oscuro</option>
+            <option value="The Nun">The Nun</option>
+          </select>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="text-sm text-red-500 uppercase border-b-2 border-red-800">
+                <th class="p-3">#</th>
+                <th class="p-3">Team</th>
+                <th class="p-3">Stanza</th>
+                <th class="p-3">Tempo</th>
+                <th class="p-3">Data</th>
+              </tr>
+            </thead>
+            <tbody id="leaderboardBody"></tbody>
+          </table>
+          <p id="emptyMsg" class="hidden py-8 text-center text-gray-500">Nessun risultato per questa stanza.</p>
+        </div>
+      </div>
+
+      <!-- AGGIUNGI RISULTATO -->
+      <div class="p-6 bg-gray-900 rounded-lg neon-border">
+        <h2 class="mb-6 text-xl font-bold text-red-500">Registra il tuo tempo</h2>
+        <form id="scoreForm" class="grid grid-cols-1 gap-6 md:grid-cols-2">
+          <div>
+            <label class="block mb-2 text-sm text-red-400">Nome Team</label>
+            <input type="text" id="teamName" required placeholder="Nome del vostro gruppo"
+              class="w-full p-3 text-white bg-black border border-red-500 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
+          </div>
+          <div>
+            <label class="block mb-2 text-sm text-red-400">Stanza</label>
+            <select id="scoreRoom" required
+              class="w-full p-3 text-white bg-black border border-red-500 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
+              <option value="">-- Seleziona --</option>
+              <option value="Il Clown">Il Clown</option>
+              <option value="Il Signore Oscuro">Il Signore Oscuro</option>
+              <option value="The Nun">The Nun</option>
+            </select>
+          </div>
+          <div>
+            <label class="block mb-2 text-sm text-red-400">Tempo impiegato (minuti)</label>
+            <input type="number" id="teamTime" min="1" max="60" required placeholder="es. 47"
+              class="w-full p-3 text-white bg-black border border-red-500 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
+          </div>
+          <div>
+            <label class="block mb-2 text-sm text-red-400">Data sessione</label>
+            <input type="date" id="sessionDate"
+              class="w-full p-3 text-white bg-black border border-red-500 rounded focus:outline-none focus:ring-2 focus:ring-red-600 [color-scheme:dark]">
+          </div>
+          <div class="md:col-span-2">
+            <button type="submit"
+              class="w-full px-6 py-3 font-bold text-white transition bg-red-700 rounded hover:bg-red-600">
+              <i class="mr-2"></i> Salva nella Hall of Fame
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="mt-8 text-sm bg-gray-900 border-t border-red-900">
+    <div class="grid grid-cols-1 gap-10 px-8 py-12 mx-auto max-w-7xl md:grid-cols-4">
+      <div class="flex flex-col gap-4">
+        <img src="/Escape-Room/img/logo-sito-ridimensionato.png" alt="Secret Room" class="w-32">
+        <p class="leading-relaxed text-gray-300">L'escape room più adrenalinica di Pescara. Scenografie cinematografiche, attori dal vivo, emozioni reali.</p>
+      </div>
+      <div>
+        <h4 class="mb-4 text-base font-bold text-red-500 uppercase">Esplora</h4>
+        <ul class="space-y-2 text-gray-300">
+          <li><a href="./" class="transition hover:text-red-400">Home</a></li>
+          <li><a href="./stanze.html" class="transition hover:text-red-400">Le Stanze</a></li>
+          <li><a href="./prenotazione.html" class="transition hover:text-red-400">Prenota</a></li>
+          <li><a href="./classifica.html" class="transition hover:text-red-400">Classifica</a></li>
+          <li><a href="./faq.html" class="transition hover:text-red-400">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mb-4 text-base font-bold text-red-500 uppercase">Contatti</h4>
+        <ul class="space-y-3 text-gray-300">
+          <li class="flex items-start gap-2"><i class="mt-1 text-red-700 fa-solid fa-location-dot"></i><span>Via Roma 42, 65100 Pescara PE</span></li>
+          <li class="flex items-center gap-2"><i class="text-red-700 fa-solid fa-phone"></i><span>+39 085 000 0000</span></li>
+          <li class="flex items-center gap-2"><i class="text-red-700 fa-solid fa-envelope"></i><span>info@secretroom.it</span></li>
+          <li class="flex items-center gap-2"><i class="text-red-700 fa-regular fa-clock"></i><span>Lun-Dom: 15:00 – 23:00</span></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mb-4 text-base font-bold text-red-500 uppercase">Seguici</h4>
+        <div class="flex gap-4 text-2xl">
+          <a href="#" class="text-gray-300 transition hover:text-red-400"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="text-gray-300 transition hover:text-red-400"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="text-gray-300 transition hover:text-red-400"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" class="text-gray-300 transition hover:text-red-400"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="py-4 text-center text-gray-500 border-t border-red-900">
+      <p>&copy; 2026 S·E·C·R·E·T ROOM — Esame Finale Infobasic. Tutti i diritti riservati.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
