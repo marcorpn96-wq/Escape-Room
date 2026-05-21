@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="/Escape-Room/shared.css" />
   <title>The Nun — Secret Room Pescara</title>
-  <script type="module" crossorigin src="/Escape-Room/assets/main-BLX8bd1N.js"></script>
-  <link rel="stylesheet" crossorigin href="/Escape-Room/assets/main-U2HOBIVy.css">
+  <script type="module" crossorigin src="/Escape-Room/assets/main-BlokYBV-.js"></script>
+  <link rel="stylesheet" crossorigin href="/Escape-Room/assets/main-Ckw3yTVJ.css">
 </head>
 <body class="overflow-x-hidden text-white bg-black">
 
@@ -20,7 +20,15 @@
       <a href="./"><img src="/Escape-Room/img/logo-sito-ridimensionato.png" alt="Secret Room" class="h-16 cursor-pointer" /></a>
       <nav class="hidden gap-6 font-semibold text-red-500 md:flex">
         <a href="./" class="transition hover:text-red-300">Home</a>
-        <a href="./stanze.html" class="text-white transition hover:text-red-300">Stanze</a>
+        <div class="relative group">
+          <a href="./stanze.html" class="flex items-center gap-1 text-white transition hover:text-red-300">Stanze <i class="fa-solid fa-chevron-down text-xs opacity-60"></i></a>
+          <div class="absolute left-0 z-50 hidden min-w-[190px] py-1 bg-black border border-red-900 rounded top-full group-hover:flex flex-col">
+            <a href="./stanze.html" class="px-4 py-2 text-sm font-semibold border-b border-red-900 transition hover:bg-gray-900 hover:text-red-300">Tutte le Stanze</a>
+            <a href="./scheda-stanza-clown.html" class="px-4 py-2 text-sm transition hover:bg-gray-900 hover:text-red-300">Il Clown</a>
+            <a href="./scheda-stanza-signore-oscuro.html" class="px-4 py-2 text-sm transition hover:bg-gray-900 hover:text-red-300">Il Signore Oscuro</a>
+            <a href="./scheda-stanza-suora.html" class="px-4 py-2 text-sm transition hover:bg-gray-900 hover:text-red-300">The Nun</a>
+          </div>
+        </div>
         <a href="./prenotazione.html" class="text-white transition hover:text-red-300">Prenotazione</a>
         <a href="./classifica.html" class="transition hover:text-red-300">Classifica</a>
         <a href="./faq.html" class="transition hover:text-red-300">FAQ</a>
@@ -33,6 +41,10 @@
       <nav class="flex flex-col gap-4 font-semibold text-red-500">
         <a href="./" class="transition hover:text-red-300">Home</a>
         <a href="./stanze.html" class="transition hover:text-red-300">Stanze</a>
+        <a href="./stanze.html" class="pl-4 text-xs text-gray-400 font-semibold transition hover:text-red-300">Tutte le Stanze</a>
+        <a href="./scheda-stanza-clown.html" class="pl-4 text-xs text-gray-400 transition hover:text-red-300">Il Clown</a>
+        <a href="./scheda-stanza-signore-oscuro.html" class="pl-4 text-xs text-gray-400 transition hover:text-red-300">Il Signore Oscuro</a>
+        <a href="./scheda-stanza-suora.html" class="pl-4 text-xs text-gray-400 transition hover:text-red-300">The Nun</a>
         <a href="./prenotazione.html" class="transition hover:text-red-300">Prenotazione</a>
         <a href="./classifica.html" class="transition hover:text-red-300">Classifica</a>
         <a href="./faq.html" class="transition hover:text-red-300">FAQ</a>
