@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+
+.neon-text { color: #ff0000; text-shadow: 0 0 5px #ff0000, 0 0 1px #ff0000, 0 0 3px #aa0000; }
+.neon-border { border: 2px solid #ff0000; box-shadow: 0 0 5px #ff0000, inset 0 0 5px #ff0000; }
+.neon-border:hover { box-shadow: 0 0 15px #ff0000, inset 0 0 10px #ff0000; }
+.section-hidden { display: none; }
+
+/* Galleria */
+.gallery-thumb { cursor: pointer; transition: opacity 0.2s; }
+.gallery-thumb:hover { opacity: 0.75; }
+
+/* Classifica */
+.rank-gold   { color: #FFD700; }
+.rank-silver { color: #C0C0C0; }
+.rank-bronze { color: #CD7F32; }
+
+/* FAQ accordion */
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; }
+.faq-answer.open { max-height: 500px; }
+.faq-icon { transition: transform 0.3s ease; }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+
+/* Font globali */
+h1 { font-family: 'Cinzel', serif; }
+h2, h3, h4, h5, h6 { font-family: 'Cinzel Decorative', serif; }
+p, a, button, strong, span, li, label, select, input, textarea, td, th { font-family: 'Cinzel Decorative', serif; }
