@@ -1,0 +1,31 @@
+/* 1. Font Google — DEVE stare per primo */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* 2. Direttive Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 3. Le tue classi custom */
+.neon-text {
+  color: #ff0000;
+  text-shadow: 0 0 5px #ff0000, 0 0 1px #ff0000, 0 0 3px #aa0000;
+}
+.neon-border {
+  border: 2px solid #ff0000;
+  box-shadow: 0 0 5px #ff0000, inset 0 0 5px #ff0000;
+}
+.neon-border:hover {
+  box-shadow: 0 0 15px #ff0000, inset 0 0 10px #ff0000;
+}
+.section-hidden {
+  display: none;
+}
+
+h1 { font-family: 'Cinzel', serif; }
+h2, h3, h4, h5, h6 { font-family: 'Cinzel Decorative', serif; }
+p, a, button, strong, span { font-family: 'Cinzel Decorative', serif; }
+ul, li { font-family: 'Cinzel Decorative', serif; }
+select, input, textarea { font-family: 'Cinzel Decorative', serif; }
+label { font-family: 'Cinzel Decorative', serif; }
+td, th { font-family: 'Cinzel Decorative', serif; }
