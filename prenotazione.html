@@ -6,10 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css" />
   <link rel="stylesheet" href="/Escape-Room/shared.css" />
   <title>Prenotazione - Secret Room Pescara</title>
-  <script type="module" crossorigin src="/Escape-Room/assets/main-E10pOfkz.js"></script>
-  <link rel="stylesheet" crossorigin href="/Escape-Room/assets/main-BXNCTpeT.css">
+  <script type="module" crossorigin src="/Escape-Room/assets/main-DOMzZjq1.js"></script>
+  <link rel="stylesheet" crossorigin href="/Escape-Room/assets/main-CKyPnW7P.css">
 </head>
 <body class="overflow-x-hidden text-white bg-black">
 
@@ -108,8 +110,8 @@
             <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
               <div>
                 <label class="block mb-2 font-semibold text-red-500">Data</label>
-                <input type="date" id="bookingDate" required
-                  class="w-full bg-black border border-red-500 text-white p-3 rounded focus:outline-none focus:ring-2 focus:ring-red-600 [color-scheme:dark]">
+                <input type="text" id="bookingDate" required placeholder="Seleziona una data"
+                  class="w-full bg-black border border-red-500 text-white p-3 rounded focus:outline-none focus:ring-2 focus:ring-red-600 cursor-pointer" readonly>
               </div>
               <div>
                 <label class="block mb-2 font-semibold text-red-500">Fascia Oraria</label>
@@ -162,66 +164,6 @@
 
         <!-- COLONNA DESTRA STANZE + INFORMAZIONI -->
         <div class="flex flex-col gap-8">
-
-          <!-- STANZE -->
-          <div class="p-6 bg-gray-900 border border-red-900 rounded-lg">
-            <h3 class="pb-3 mb-5 text-xl font-bold text-red-500 border-b border-gray-700">Le Stanze</h3>
-            <div class="space-y-5">
-
-              <a href="./scheda-stanza-clown.html" class="flex items-center gap-4 transition group hover:text-red-400">
-                <div class="relative flex-shrink-0 w-20 h-20 overflow-hidden rounded">
-                  <img src="/Escape-Room/img/stanze/clown/imgi_13_Logicus-escape-room-cagliari-clown-gallery-5.jpg"
-                    class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105" style="object-position: center 35%">
-                </div>
-                <div class="flex-1 min-w-0">
-                  <p class="font-bold text-white group-hover:text-red-400">Il Clown</p>
-                  <p class="mb-1 text-xs text-gray-500">Survival Horror · ★★★★★</p>
-                  <div class="flex items-center gap-3 text-xs text-gray-400">
-                    <span><i class="mr-1 text-red-700 fa-solid fa-users"></i>2–10 giocatori</span>
-                    <span><i class="mr-1 text-red-700 fa-solid fa-euro-sign"></i>€30/pp</span>
-                  </div>
-                </div>
-                <i class="flex-shrink-0 text-xs text-red-700 fa-solid fa-chevron-right"></i>
-              </a>
-
-              <hr class="border-gray-800">
-
-              <a href="./scheda-stanza-signore-oscuro.html" class="flex items-center gap-4 transition group hover:text-red-400">
-                <div class="relative flex-shrink-0 w-20 h-20 overflow-hidden rounded">
-                  <img src="/Escape-Room/img/stanze/il-signore-oscuro/imgi_9_escape-room-cagliari-oscuro-logicus-scaled.jpg"
-                    class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105" style="object-position: center 35%">
-                </div>
-                <div class="flex-1 min-w-0">
-                  <p class="font-bold text-white group-hover:text-red-400">Il Signore Oscuro</p>
-                  <p class="mb-1 text-xs text-gray-500">Fantasy · ★★★★☆</p>
-                  <div class="flex items-center gap-3 text-xs text-gray-400">
-                    <span><i class="mr-1 text-red-700 fa-solid fa-users"></i>2–8 giocatori</span>
-                    <span><i class="mr-1 text-red-700 fa-solid fa-euro-sign"></i>€25/pp</span>
-                  </div>
-                </div>
-                <i class="flex-shrink-0 text-xs text-red-700 fa-solid fa-chevron-right"></i>
-              </a>
-
-              <hr class="border-gray-800">
-
-              <a href="./scheda-stanza-suora.html" class="flex items-center gap-4 transition group hover:text-red-400">
-                <div class="relative flex-shrink-0 w-20 h-20 overflow-hidden rounded">
-                  <img src="/Escape-Room/img/stanze/la-suora/imgi_8_escape-room-cagliari-suora-logicus-scaled.jpg"
-                    class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105" style="object-position: center 35%">
-                </div>
-                <div class="flex-1 min-w-0">
-                  <p class="font-bold text-white group-hover:text-red-400">The Nun</p>
-                  <p class="mb-1 text-xs text-gray-500">Horror · ★★★★☆</p>
-                  <div class="flex items-center gap-3 text-xs text-gray-400">
-                    <span><i class="mr-1 text-red-700 fa-solid fa-users"></i>2–6 giocatori</span>
-                    <span><i class="mr-1 text-red-700 fa-solid fa-euro-sign"></i>€20/pp</span>
-                  </div>
-                </div>
-                <i class="flex-shrink-0 text-xs text-red-700 fa-solid fa-chevron-right"></i>
-              </a>
-
-            </div>
-          </div>
 
           <!-- INFORMAZIONI -->
           <div class="p-6 bg-gray-900 border border-red-900 rounded-lg">
@@ -304,5 +246,15 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/it.js"></script>
+  <script>
+    flatpickr('#bookingDate', {
+      locale: 'it',
+      minDate: 'today',
+      dateFormat: 'd/m/Y',
+      disableMobile: true,
+    });
+  </script>
 </body>
 </html>
