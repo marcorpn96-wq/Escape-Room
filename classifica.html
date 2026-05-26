@@ -7,10 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css" />
   <link rel="stylesheet" href="/Escape-Room/shared.css" />
   <title>Classifica - Secret Room Pescara</title>
-  <script type="module" crossorigin src="/Escape-Room/assets/main-DJS5rb17.js"></script>
-  <link rel="stylesheet" crossorigin href="/Escape-Room/assets/main-gPNQSWO3.css">
+  <script type="module" crossorigin src="/Escape-Room/assets/main-CUXFV9v-.js"></script>
+  <link rel="stylesheet" crossorigin href="/Escape-Room/assets/main-Clpx59X8.css">
 </head>
 
 <body class="overflow-x-hidden text-white bg-black">
@@ -104,12 +106,13 @@
           </div>
           <div>
             <label class="block mb-2 text-sm text-red-400">Data sessione</label>
-            <input type="date" id="sessionDate"
-              class="w-full p-3 text-white bg-black border border-red-500 rounded focus:outline-none focus:ring-2 focus:ring-red-600 [color-scheme:dark]">
+            <input type="text" id="sessionDate" placeholder="Seleziona una data"
+              class="w-full p-3 text-white bg-black border border-red-500 rounded cursor-pointer focus:outline-none focus:ring-2 focus:ring-red-600" readonly>
           </div>
           <div class="flex items-start gap-2 md:col-span-2">
             <input type="checkbox" id="privacyScore" class="mt-1 cursor-pointer accent-red-600">
-            <label for="privacyScore" class="text-sm text-gray-400">Ho letto e accetto la <a href="#" class="text-red-500 underline hover:text-red-400">Privacy Policy</a></label>
+            <label for="privacyScore" class="text-sm text-gray-400">Ho letto e accetto la <a href="#"
+                class="text-red-500 underline hover:text-red-400">Privacy Policy</a></label>
           </div>
           <div class="md:col-span-2">
             <button type="submit"
@@ -201,6 +204,8 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/it.js"></script>
 </body>
 
 </html>

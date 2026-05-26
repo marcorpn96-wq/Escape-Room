@@ -11,8 +11,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css" />
   <link rel="stylesheet" href="/Escape-Room/shared.css" />
   <title>Esame Secret Room</title>
-  <script type="module" crossorigin src="/Escape-Room/assets/main-DJS5rb17.js"></script>
-  <link rel="stylesheet" crossorigin href="/Escape-Room/assets/main-gPNQSWO3.css">
+  <script type="module" crossorigin src="/Escape-Room/assets/main-CUXFV9v-.js"></script>
+  <link rel="stylesheet" crossorigin href="/Escape-Room/assets/main-Clpx59X8.css">
 </head>
 
 <body class="overflow-x-hidden font-sans text-white bg-black">
@@ -76,9 +76,9 @@
         <div class="z-10 w-full px-6 mt-16 text-left md:px-16 md:mt-48">
           <h1 class="mb-6 text-4xl font-bold md:text-5xl font-cinzel">NON È UN GIOCO.</h1>
           <p class="mb-8 text-3xl font-bold text-red-500 md:text-6xl font-cinzel neon-text">È UN'ESPERIENZA.</p>
-          <p class="font-sans text-lg md:text-2xl"><span class="text-4xl font-bold text-red-500">Escape room</span>
+          <p class="text-lg font-cinzel md:text-2xl"><span class="text-4xl font-bold text-red-500 font-cinzel-dec">Escape room</span>
             di Pescara come non le hai mai vissute.</p>
-          <p class="mb-8 font-sans text-lg md:text-xl">Scenografie cinematografiche, attori dal vivo e un livello
+          <p class="mb-8 text-lg md:text-xl font-cinzel">Scenografie cinematografiche, attori dal vivo e un livello
             di adrenalina che scegli tu.</p>
           <div class="flex flex-wrap gap-4">
             <a href="./prenotazione.html"
@@ -282,7 +282,7 @@
           <div>
             <label class="block mb-2 font-semibold text-red-500">Data</label>
             <input type="text" id="bookingDate" placeholder="Seleziona una data"
-              class="w-full bg-black border border-red-500 text-white p-3 rounded focus:outline-none focus:ring-2 focus:ring-red-600 cursor-pointer" readonly>
+              class="w-full p-3 text-white bg-black border border-red-500 rounded cursor-pointer focus:outline-none focus:ring-2 focus:ring-red-600" readonly>
           </div>
           <div>
             <label class="block mb-2 font-semibold text-red-500">Fascia Oraria</label>
@@ -298,16 +298,16 @@
           <label class="block mb-2 font-semibold text-red-500">Numero Giocatori</label>
           <input type="number" id="playerCount" min="2" max="10" value="2"
             class="w-full p-3 text-white bg-black border border-red-500 rounded">
-          <p class="mt-2 text-sm text-gray-400 font-crimson">Sconto del 20% applicato per gruppi di 4 o più persone!</p>
+          <p class="mt-2 text-sm text-gray-400 font-cinzel-dec">Sconto del 20% applicato per gruppi di 4 o più persone!</p>
         </div>
 
         <div class="p-4 text-center bg-black border border-gray-700 rounded">
           <p class="text-lg font-cinzel-dec">Totale Stimato:</p>
-          <p id="totalPrice" class="text-3xl font-bold neon-text font-crimson">€0.00</p>
+          <p id="totalPrice" class="text-4xl font-bold neon-text font-cinzel-dec">€0.00</p>
         </div>
 
         <div class="flex items-start gap-2">
-          <input type="checkbox" id="privacyBooking" class="mt-1 accent-red-600 cursor-pointer">
+          <input type="checkbox" id="privacyBooking" class="mt-1 cursor-pointer accent-red-600">
           <label for="privacyBooking" class="text-sm text-gray-400">Ho letto e accetto la <a href="#" class="text-red-500 underline hover:text-red-400">Privacy Policy</a></label>
         </div>
 
@@ -319,7 +319,7 @@
 
     <!-- LANDING PAGE / NEWSLETTER -->
     <section class="relative w-full py-24 overflow-hidden">
-      <!-- sfondo decorativo -->
+      <!-- sfondo -->
       <div class="absolute inset-0 pointer-events-none opacity-5"
         style="background-image: repeating-linear-gradient(0deg,transparent,transparent 40px,#ff0000 40px,#ff0000 41px), repeating-linear-gradient(90deg,transparent,transparent 40px,#ff0000 40px,#ff0000 41px);">
       </div>
@@ -328,12 +328,12 @@
 
         <!-- Badge -->
         <span
-          class="inline-block px-4 py-1 mb-6 text-xs font-bold tracking-widest text-red-400 uppercase border border-red-800 rounded-full bg-red-950">
+          class="px-4 py-1 mb-8 text-xs font-bold tracking-widest text-red-400 uppercase border border-red-800 rounded-full font-cinzel-dec bg-red-950">
           Novità & Promozioni
         </span>
 
         <!-- testo -->
-        <h2 class="mb-4 text-4xl font-bold md:text-6xl neon-text">Osa l'Impossibile.</h2>
+        <h2 class="mt-4 mb-4 text-4xl font-bold md:text-6xl neon-text">Osa l'Impossibile.</h2>
         <p class="mb-4 text-xl font-bold text-red-500 md:text-2xl">Secret Room Pescara — L'escape room più estrema
           d'Abruzzo.</p>
         <p class="max-w-2xl mx-auto mb-12 leading-relaxed text-gray-400">
@@ -372,8 +372,8 @@
               </button>
             </div>
             <div class="flex items-start gap-2">
-              <input type="checkbox" id="privacyNewsletter" class="mt-1 accent-red-600 cursor-pointer">
-              <label for="privacyNewsletter" class="text-sm text-gray-400 text-left">Ho letto e accetto la <a href="#" class="text-red-500 underline hover:text-red-400">Privacy Policy</a></label>
+              <input type="checkbox" id="privacyNewsletter" class="mt-1 cursor-pointer accent-red-600">
+              <label for="privacyNewsletter" class="text-sm text-left text-gray-400">Ho letto e accetto la <a href="#" class="text-red-500 underline hover:text-red-400">Privacy Policy</a></label>
             </div>
           </form>
           <p id="newsletterMsg" class="hidden mt-4 text-sm font-bold text-green-400">
