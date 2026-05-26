@@ -10,8 +10,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css" />
   <link rel="stylesheet" href="/Escape-Room/shared.css" />
   <title>Prenotazione - Secret Room Pescara</title>
-  <script type="module" crossorigin src="/Escape-Room/assets/main-DOMzZjq1.js"></script>
-  <link rel="stylesheet" crossorigin href="/Escape-Room/assets/main-CKyPnW7P.css">
+  <script type="module" crossorigin src="/Escape-Room/assets/main-DJS5rb17.js"></script>
+  <link rel="stylesheet" crossorigin href="/Escape-Room/assets/main-gPNQSWO3.css">
 </head>
 <body class="overflow-x-hidden text-white bg-black">
 
@@ -70,19 +70,19 @@
 
         <!-- FORM DATI PRENOTAZIONE -->
         <div>
-          <form id="bookingForm" class="p-8 space-y-6 bg-gray-900 rounded-lg neon-border">
+          <form id="bookingForm" novalidate class="p-8 space-y-6 bg-gray-900 rounded-lg neon-border">
             <h2 class="pb-4 text-2xl font-bold text-red-500 border-b border-gray-700">Dati prenotazione</h2>
 
             <!-- Nome e Email -->
             <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
               <div>
                 <label class="block mb-2 font-semibold text-red-500">Nome e Cognome</label>
-                <input type="text" id="fullName" required placeholder="Mario Rossi"
+                <input type="text" id="fullName" placeholder="Mario Rossi"
                   class="w-full p-3 text-white bg-black border border-red-500 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
               </div>
               <div>
                 <label class="block mb-2 font-semibold text-red-500">Email</label>
-                <input type="email" id="email" required placeholder="mario@email.it"
+                <input type="email" id="email" placeholder="mario@email.it"
                   class="w-full p-3 text-white bg-black border border-red-500 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
               </div>
             </div>
@@ -97,7 +97,7 @@
             <!-- Stanza -->
             <div>
               <label class="block mb-2 font-semibold text-red-500">Seleziona Stanza</label>
-              <select id="roomSelect" required
+              <select id="roomSelect"
                 class="w-full p-3 text-white bg-black border border-red-500 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
                 <option value="">-- Scegli la tua stanza --</option>
                 <option value="clown" data-price="30">Il Clown - Survival Horror (€30/pp)</option>
@@ -110,12 +110,12 @@
             <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
               <div>
                 <label class="block mb-2 font-semibold text-red-500">Data</label>
-                <input type="text" id="bookingDate" required placeholder="Seleziona una data"
-                  class="w-full bg-black border border-red-500 text-white p-3 rounded focus:outline-none focus:ring-2 focus:ring-red-600 cursor-pointer" readonly>
+                <input type="text" id="bookingDate" placeholder="Seleziona una data"
+                  class="w-full p-3 text-white bg-black border border-red-500 rounded cursor-pointer focus:outline-none focus:ring-2 focus:ring-red-600" readonly>
               </div>
               <div>
                 <label class="block mb-2 font-semibold text-red-500">Fascia Oraria</label>
-                <select id="timeSlot" required
+                <select id="timeSlot"
                   class="w-full p-3 text-white bg-black border border-red-500 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
                   <option value="">-- Seleziona --</option>
                   <option value="18:00">18:00</option>
@@ -128,7 +128,7 @@
             <!-- Numero Giocatori -->
             <div>
               <label class="block mb-2 font-semibold text-red-500">Numero Giocatori</label>
-              <input type="number" id="playerCount" min="2" max="10" value="2" required
+              <input type="number" id="playerCount" min="2" max="10" value="2"
                 class="w-full p-3 text-white bg-black border border-red-500 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
               <p class="mt-2 text-sm text-gray-400"><i class="mr-1 text-red-700 fa-solid fa-percent"></i>Sconto del 20% applicato per gruppi di 4 o più persone!</p>
             </div>
@@ -145,6 +145,11 @@
               <p class="text-sm text-gray-400">Totale Stimato</p>
               <p id="totalPrice" class="mt-1 text-4xl font-bold neon-text">€0.00</p>
               <p id="discountNote" class="hidden mt-1 text-sm text-green-400"><i class="mr-1"></i>Sconto gruppo 20% applicato!</p>
+            </div>
+
+            <div class="flex items-start gap-2">
+              <input type="checkbox" id="privacyBooking" class="mt-1 cursor-pointer accent-red-600">
+              <label for="privacyBooking" class="text-sm text-gray-400">Ho letto e accetto la <a href="#" class="text-red-500 underline hover:text-red-400">Privacy Policy</a></label>
             </div>
 
             <button type="submit"
@@ -228,7 +233,7 @@
           <li class="flex items-start gap-2"><i class="mt-1 text-red-700 fa-solid fa-location-dot"></i><span>Via Roma 42, 65100 Pescara PE</span></li>
           <li class="flex items-center gap-2"><i class="text-red-700 fa-solid fa-phone"></i><span>+39 085 000 0000</span></li>
           <li class="flex items-center gap-2"><i class="text-red-700 fa-solid fa-envelope"></i><span>info@secretroom.it</span></li>
-          <li class="flex items-center gap-2"><i class="text-red-700 fa-regular fa-clock"></i><span>Lun-Dom: 15:00 – 23:00</span></li>
+          <li class="flex items-center gap-2"><i class="text-red-700 fa-regular fa-clock"></i><span>Lun-Dom: 15:00 - 23:00</span></li>
         </ul>
       </div>
       <div>
@@ -248,13 +253,5 @@
 
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/it.js"></script>
-  <script>
-    flatpickr('#bookingDate', {
-      locale: 'it',
-      minDate: 'today',
-      dateFormat: 'd/m/Y',
-      disableMobile: true,
-    });
-  </script>
 </body>
 </html>

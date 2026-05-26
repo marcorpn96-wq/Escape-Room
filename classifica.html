@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="/Escape-Room/shared.css" />
   <title>Classifica - Secret Room Pescara</title>
-  <script type="module" crossorigin src="/Escape-Room/assets/main-DOMzZjq1.js"></script>
-  <link rel="stylesheet" crossorigin href="/Escape-Room/assets/main-CKyPnW7P.css">
+  <script type="module" crossorigin src="/Escape-Room/assets/main-DJS5rb17.js"></script>
+  <link rel="stylesheet" crossorigin href="/Escape-Room/assets/main-gPNQSWO3.css">
 </head>
 
 <body class="overflow-x-hidden text-white bg-black">
@@ -81,15 +81,15 @@
       <!-- AGGIUNGI RISULTATO -->
       <div class="p-6 mb-12 bg-gray-900 rounded-lg neon-border">
         <h2 class="mb-6 text-xl font-bold text-red-500">Registra il tuo tempo</h2>
-        <form id="scoreForm" class="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <form id="scoreForm" novalidate class="grid grid-cols-1 gap-6 md:grid-cols-2">
           <div>
             <label class="block mb-2 text-sm text-red-400">Nome Team</label>
-            <input type="text" id="teamName" required placeholder="Nome del vostro gruppo"
+            <input type="text" id="teamName" placeholder="Nome del vostro gruppo"
               class="w-full p-3 text-white bg-black border border-red-500 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
           </div>
           <div>
             <label class="block mb-2 text-sm text-red-400">Stanza</label>
-            <select id="scoreRoom" required
+            <select id="scoreRoom"
               class="w-full p-3 text-white bg-black border border-red-500 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
               <option value="">-- Seleziona --</option>
               <option value="Il Clown">Il Clown</option>
@@ -99,13 +99,17 @@
           </div>
           <div>
             <label class="block mb-2 text-sm text-red-400">Tempo impiegato (minuti)</label>
-            <input type="number" id="teamTime" min="1" max="60" required placeholder="es. 47"
+            <input type="number" id="teamTime" min="1" max="60" placeholder="es. 47"
               class="w-full p-3 text-white bg-black border border-red-500 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
           </div>
           <div>
             <label class="block mb-2 text-sm text-red-400">Data sessione</label>
             <input type="date" id="sessionDate"
               class="w-full p-3 text-white bg-black border border-red-500 rounded focus:outline-none focus:ring-2 focus:ring-red-600 [color-scheme:dark]">
+          </div>
+          <div class="flex items-start gap-2 md:col-span-2">
+            <input type="checkbox" id="privacyScore" class="mt-1 cursor-pointer accent-red-600">
+            <label for="privacyScore" class="text-sm text-gray-400">Ho letto e accetto la <a href="#" class="text-red-500 underline hover:text-red-400">Privacy Policy</a></label>
           </div>
           <div class="md:col-span-2">
             <button type="submit"
@@ -178,7 +182,7 @@
               0000</span></li>
           <li class="flex items-center gap-2"><i
               class="text-red-700 fa-solid fa-envelope"></i><span>info@secretroom.it</span></li>
-          <li class="flex items-center gap-2"><i class="text-red-700 fa-regular fa-clock"></i><span>Lun-Dom: 15:00 –
+          <li class="flex items-center gap-2"><i class="text-red-700 fa-regular fa-clock"></i><span>Lun-Dom: 15:00 -
               23:00</span></li>
         </ul>
       </div>
