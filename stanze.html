@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="it">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/Escape-Room/favicon.svg" />
@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="/Escape-Room/shared.css" />
   <title>Le Stanze - Secret Room Pescara</title>
-  <script type="module" crossorigin src="/Escape-Room/assets/main-D_0vFx8W.js"></script>
-  <link rel="stylesheet" crossorigin href="/Escape-Room/assets/main-SI11ANcI.css">
+  <script type="module" crossorigin src="/Escape-Room/assets/main-DtBNNYpF.js"></script>
+  <link rel="stylesheet" crossorigin href="/Escape-Room/assets/main-CdsQx58-.css">
 </head>
 <body class="overflow-x-hidden text-white bg-black">
 
@@ -57,7 +57,7 @@
     <section class="relative flex items-center justify-center w-full h-64 overflow-hidden">
       <img src="/Escape-Room/img/Escape-Room.jpg" alt="" class="absolute inset-0 object-cover w-full h-full opacity-20">
       <div class="relative z-10 px-4 text-center">
-        <p class="mb-2 text-sm tracking-widest text-red-500 uppercase">Scegli la tua avventura</p>
+        <p class="mb-2 text-sm tracking-widest text-red-500 uppercase font-cinzel-dec">Scegli la tua avventura</p>
         <h1 class="text-5xl font-bold md:text-6xl neon-text">Le Nostre Stanze</h1>
       </div>
     </section>
@@ -75,7 +75,7 @@
         <div class="relative flex flex-col overflow-hidden bg-gray-900 rounded-lg neon-border group">
           <a href="./scheda-stanza-clown.html" class="absolute inset-0 z-0"></a>
           <div class="relative overflow-hidden h-80">
-            <img src="/Escape-Room/img/stanze/clown/imgi_13_Logicus-escape-room-cagliari-clown-gallery-5.jpg" alt="Il Clown"
+            <img src="/Escape-Room/img/stanze/clown/il-clown.jpg" alt="Il Clown"
               class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105" style="object-position: center 35%;">
             <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
             <span class="absolute text-xs tracking-widest text-red-400 uppercase bottom-4 left-4">Survival Horror</span>
@@ -99,7 +99,7 @@
         <div class="relative flex flex-col overflow-hidden bg-gray-900 rounded-lg neon-border group">
           <a href="./scheda-stanza-signore-oscuro.html" class="absolute inset-0 z-0"></a>
           <div class="relative overflow-hidden h-80">
-            <img src="/Escape-Room/img/stanze/il-signore-oscuro/imgi_9_escape-room-cagliari-oscuro-logicus-scaled.jpg" alt="Il Signore Oscuro"
+            <img src="/Escape-Room/img/stanze/il-signore-oscuro/il-signore-oscuro.jpg" alt="Il Signore Oscuro"
               class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105" style="object-position: center 35%;">
             <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
             <span class="absolute text-xs tracking-widest text-red-400 uppercase bottom-4 left-4">Fantasy</span>
@@ -123,7 +123,7 @@
         <div class="relative flex flex-col overflow-hidden bg-gray-900 rounded-lg neon-border group">
           <a href="./scheda-stanza-suora.html" class="absolute inset-0 z-0"></a>
           <div class="relative overflow-hidden h-80">
-            <img src="/Escape-Room/img/stanze/la-suora/imgi_8_escape-room-cagliari-suora-logicus-scaled.jpg" alt="The Nun"
+            <img src="/Escape-Room/img/stanze/la-suora/la-suora.jpg" alt="The Nun"
               class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105" style="object-position: center 35%;">
             <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
             <span class="absolute text-xs tracking-widest text-red-400 uppercase bottom-4 left-4">Horror</span>
@@ -197,6 +197,20 @@
       <p>&copy; 2026 S·E·C·R·E·T ROOM. Tutti i diritti riservati.</p>
     </div>
   </footer>
+
+  <!-- COOKIE BANNER -->
+  <div id="cookieBanner" class="fixed bottom-0 left-0 right-0 z-[100] hidden bg-gray-950 border-t border-red-900 px-4 py-4">
+    <div class="flex flex-col gap-4 mx-auto md:flex-row md:items-center md:justify-between max-w-7xl">
+      <p class="text-sm leading-relaxed text-gray-300">
+        Utilizziamo cookie tecnici per garantire il corretto funzionamento del sito. Leggi la nostra
+        <a href="#" class="text-red-400 underline hover:text-red-300">Privacy Policy</a>.
+      </p>
+      <div class="flex flex-shrink-0 gap-3">
+        <button id="cookieDecline" class="px-4 py-2 text-sm text-gray-400 transition border border-gray-600 rounded hover:border-red-700 hover:text-white">Rifiuta</button>
+        <button id="cookieAccept" class="px-4 py-2 text-sm font-bold text-white transition bg-red-700 rounded hover:bg-red-600">Accetta</button>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>

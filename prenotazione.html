@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="it">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -11,8 +11,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css" />
   <link rel="stylesheet" href="/Escape-Room/shared.css" />
   <title>Prenotazione - Secret Room Pescara</title>
-  <script type="module" crossorigin src="/Escape-Room/assets/main-D_0vFx8W.js"></script>
-  <link rel="stylesheet" crossorigin href="/Escape-Room/assets/main-SI11ANcI.css">
+  <script type="module" crossorigin src="/Escape-Room/assets/main-DtBNNYpF.js"></script>
+  <link rel="stylesheet" crossorigin href="/Escape-Room/assets/main-CdsQx58-.css">
 </head>
 
 <body class="overflow-x-hidden text-white bg-black">
@@ -73,14 +73,28 @@
     <section class="relative flex items-center justify-center w-full h-64 overflow-hidden">
       <img src="/Escape-Room/img/Escape-Room.jpg" alt="" class="absolute inset-0 object-cover w-full h-full opacity-20">
       <div class="relative z-10 px-4 text-center">
-        <p class="mb-2 text-sm tracking-widest text-red-500 uppercase">Il tuo ingresso nell'oscurità</p>
+        <p class="mb-2 text-sm tracking-widest text-red-500 uppercase font-cinzel-dec">Il tuo ingresso nell'oscurità</p>
         <h1 class="text-5xl font-bold md:text-6xl neon-text">Prenota</h1>
       </div>
     </section>
 
     <!-- FORM + SIDEBAR -->
     <section class="px-8 py-16 mx-auto max-w-7xl">
-      <div class="grid grid-cols-1 gap-10 lg:grid-cols-2">
+
+      <!-- TAB SWITCHER -->
+      <div class="flex gap-2 mb-10 border-b border-red-900">
+        <button id="tab-btn-prenota" onclick="switchTab('prenota')"
+          class="px-6 py-3 text-sm font-bold text-white transition border-b-2 border-red-500">
+          <i class="mr-2 fa-solid fa-calendar-days"></i>Prenota Sessione
+        </button>
+        <button id="tab-btn-giftcard" onclick="switchTab('giftcard')"
+          class="px-6 py-3 text-sm font-bold text-gray-400 transition border-b-2 border-transparent hover:text-white">
+          <i class="mr-2 fa-solid fa-gift"></i>Acquista Gift Card
+        </button>
+      </div>
+
+      <!-- TAB: PRENOTA -->
+      <div id="tab-prenota" class="grid grid-cols-1 gap-10 lg:grid-cols-2">
 
         <!-- FORM DATI PRENOTAZIONE -->
         <div>
@@ -227,6 +241,128 @@
         </div>
 
       </div>
+      </div><!-- fine tab-prenota -->
+
+      <!-- TAB: GIFT CARD -->
+      <div id="tab-giftcard" class="hidden">
+      <div class="grid grid-cols-1 gap-10 lg:grid-cols-2">
+
+        <!-- FORM GIFT CARD -->
+        <div>
+          <form id="giftCardForm" novalidate class="p-8 space-y-6 bg-gray-900 rounded-lg neon-border">
+            <h2 class="pb-4 text-2xl font-bold text-red-500 border-b border-gray-700">Acquista Gift Card</h2>
+
+            <!-- Importo -->
+            <div>
+              <label class="block mb-3 font-semibold text-red-500">Importo</label>
+              <div class="flex flex-wrap gap-3">
+                <button type="button" class="px-5 py-2 text-sm font-bold text-white transition bg-gray-800 border border-gray-700 rounded gc-price-btn hover:border-red-600" data-price="20">€20</button>
+                <button type="button" class="px-5 py-2 text-sm font-bold text-white transition bg-gray-800 border border-gray-700 rounded gc-price-btn hover:border-red-600" data-price="30">€30</button>
+                <button type="button" class="px-5 py-2 text-sm font-bold text-white bg-red-700 border border-red-600 rounded gc-price-btn" data-price="50">€50</button>
+                <button type="button" class="px-5 py-2 text-sm font-bold text-white transition bg-gray-800 border border-gray-700 rounded gc-price-btn hover:border-red-600" data-price="80">€80</button>
+              </div>
+              <input type="hidden" id="gcSelectedPrice" value="50">
+            </div>
+
+            <!-- Mittente -->
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+              <div>
+                <label class="block mb-2 font-semibold text-red-500">Il tuo nome</label>
+                <input type="text" id="gcSenderName" placeholder="Mario Rossi"
+                  class="w-full p-3 text-white bg-black border border-red-500 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
+              </div>
+              <div>
+                <label class="block mb-2 font-semibold text-red-500">La tua email</label>
+                <input type="email" id="gcSenderEmail" placeholder="mario@email.it"
+                  class="w-full p-3 text-white bg-black border border-red-500 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
+              </div>
+            </div>
+
+            <!-- Destinatario -->
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+              <div>
+                <label class="block mb-2 font-semibold text-red-500">Nome destinatario</label>
+                <input type="text" id="gcRecipientName" placeholder="Giulia Bianchi"
+                  class="w-full p-3 text-white bg-black border border-red-500 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
+              </div>
+              <div>
+                <label class="block mb-2 font-semibold text-red-500">Email destinatario</label>
+                <input type="email" id="gcRecipientEmail" placeholder="giulia@email.it"
+                  class="w-full p-3 text-white bg-black border border-red-500 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
+              </div>
+            </div>
+
+            <!-- Messaggio -->
+            <div>
+              <label class="block mb-2 font-semibold text-red-500">Messaggio personale (opzionale)</label>
+              <textarea id="gcMessage" rows="3" placeholder="Un pensiero per il destinatario..."
+                class="w-full p-3 text-white bg-black border border-red-500 rounded resize-none focus:outline-none focus:ring-2 focus:ring-red-600"></textarea>
+            </div>
+
+            <!-- Totale -->
+            <div class="p-4 text-center bg-black border border-gray-700 rounded">
+              <p class="text-sm text-gray-400">Importo Gift Card</p>
+              <p id="gcTotalDisplay" class="mt-1 text-4xl font-bold neon-text">€50</p>
+            </div>
+
+            <div class="flex items-start gap-2">
+              <input type="checkbox" id="gcPrivacy" class="mt-1 cursor-pointer accent-red-600">
+              <label for="gcPrivacy" class="text-sm text-gray-400">Ho letto e accetto la <a href="#"
+                  class="text-red-500 underline hover:text-red-400">Privacy Policy</a></label>
+            </div>
+
+            <button type="submit"
+              class="w-full px-6 py-4 text-xl font-bold text-white transition bg-red-600 rounded hover:bg-red-700">
+              <i class="mr-2 fa-solid fa-gift"></i>Acquista Gift Card
+            </button>
+          </form>
+
+          <!-- Conferma gift card -->
+          <div id="gcConfirmBox" class="hidden p-6 mt-6 text-center bg-gray-900 border-2 border-green-600 rounded-lg">
+            <i class="mb-3 text-4xl text-green-400 fa-solid fa-circle-check"></i>
+            <h3 class="mb-2 text-xl font-bold text-green-400">Gift Card Acquistata!</h3>
+            <p class="text-gray-300" id="gcConfirmText"></p>
+            <a href="./" class="inline-block px-6 py-2 mt-4 text-white transition bg-red-700 rounded hover:bg-red-600">Torna alla Home</a>
+          </div>
+        </div>
+
+        <!-- ANTEPRIMA CARD -->
+        <div class="flex flex-col gap-8">
+          <div class="p-6 bg-gray-900 border border-red-900 rounded-lg">
+            <h3 class="pb-3 mb-5 text-xl font-bold text-red-500 border-b border-gray-700">Anteprima</h3>
+            <div class="relative flex flex-col justify-between w-full p-6 overflow-hidden bg-gray-950 rounded-2xl neon-border" style="aspect-ratio: 1.6;">
+              <div class="absolute inset-0 opacity-5" style="background-image: repeating-linear-gradient(45deg, #ff0000 0, #ff0000 1px, transparent 0, transparent 50%); background-size: 20px 20px;"></div>
+              <div class="relative z-10">
+                <div class="flex items-center justify-between mb-3">
+                  <img src="/Escape-Room/img/logo-sito-ridimensionato.png" alt="Secret Room" class="h-10">
+                  <span class="px-2 py-1 text-xs font-bold tracking-widest text-red-500 uppercase border border-red-900 rounded">Gift Card</span>
+                </div>
+                <p id="gcPreviewRecipient" class="text-xs text-gray-400">Per: —</p>
+              </div>
+              <div class="relative z-10 flex items-end justify-between">
+                <div>
+                  <p class="mb-1 text-xs tracking-widest text-gray-600 uppercase">Valore</p>
+                  <p id="gcPreviewPrice" class="text-4xl font-bold neon-text">€50</p>
+                </div>
+                <p class="text-xs tracking-widest text-gray-600">SECRET ROOM · PESCARA</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 bg-gray-900 border border-red-900 rounded-lg">
+            <h3 class="pb-3 mb-4 text-xl font-bold text-red-500 border-b border-gray-700">Come funziona</h3>
+            <ul class="space-y-3 text-sm text-gray-300">
+              <li class="flex items-start gap-3"><i class="mt-0.5 text-red-500 fa-solid fa-check"></i><span>Riceverai la gift card via email immediatamente dopo l'acquisto</span></li>
+              <li class="flex items-start gap-3"><i class="mt-0.5 text-red-500 fa-solid fa-check"></i><span>Il destinatario può usarla per qualsiasi stanza</span></li>
+              <li class="flex items-start gap-3"><i class="mt-0.5 text-red-500 fa-solid fa-check"></i><span>Nessuna scadenza — valida fino all'utilizzo</span></li>
+              <li class="flex items-start gap-3"><i class="mt-0.5 text-red-500 fa-solid fa-check"></i><span>Pagamento in loco al momento della prenotazione</span></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      </div><!-- fine tab-giftcard -->
+
     </section>
 
   </main>
@@ -276,6 +412,20 @@
       <p>&copy; 2026 S·E·C·R·E·T ROOM. Tutti i diritti riservati.</p>
     </div>
   </footer>
+
+  <!-- COOKIE BANNER -->
+  <div id="cookieBanner" class="fixed bottom-0 left-0 right-0 z-[100] hidden bg-gray-950 border-t border-red-900 px-4 py-4">
+    <div class="flex flex-col gap-4 mx-auto md:flex-row md:items-center md:justify-between max-w-7xl">
+      <p class="text-sm leading-relaxed text-gray-300">
+        Utilizziamo cookie tecnici per garantire il corretto funzionamento del sito. Leggi la nostra
+        <a href="#" class="text-red-400 underline hover:text-red-300">Privacy Policy</a>.
+      </p>
+      <div class="flex flex-shrink-0 gap-3">
+        <button id="cookieDecline" class="px-4 py-2 text-sm text-gray-400 transition border border-gray-600 rounded hover:border-red-700 hover:text-white">Rifiuta</button>
+        <button id="cookieAccept" class="px-4 py-2 text-sm font-bold text-white transition bg-red-700 rounded hover:bg-red-600">Accetta</button>
+      </div>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/it.js"></script>
