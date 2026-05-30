@@ -11,8 +11,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css" />
   <link rel="stylesheet" href="/Escape-Room/shared.css" />
   <title>Prenotazione - Secret Room Pescara</title>
-  <script type="module" crossorigin src="/Escape-Room/assets/main-PSm0kjCT.js"></script>
-  <link rel="stylesheet" crossorigin href="/Escape-Room/assets/main-CxYy2T0y.css">
+  <script type="module" crossorigin src="/Escape-Room/assets/main-DeD9VK5d.js"></script>
+  <link rel="stylesheet" crossorigin href="/Escape-Room/assets/main-_6_6xFfU.css">
 </head>
 
 <body class="overflow-x-hidden text-white bg-black">
@@ -41,7 +41,7 @@
         </div>
         <a href="./prenotazione.html" class="text-white transition hover:text-red-300">Prenotazione</a>
         <a href="./classifica.html" class="transition hover:text-red-300">Classifica</a>
-        <a href="./faq.html" class="transition hover:text-red-300">FAQ</a>
+        <a href="./contatti.html" class="transition hover:text-red-300">Contatti</a>
       </nav>
       <button class="text-2xl text-red-500 md:hidden"
         onclick="document.getElementById('mob-menu').classList.toggle('hidden')">
@@ -62,7 +62,7 @@
           Nun</a>
         <a href="./prenotazione.html" class="transition hover:text-red-300">Prenotazione</a>
         <a href="./classifica.html" class="transition hover:text-red-300">Classifica</a>
-        <a href="./faq.html" class="transition hover:text-red-300">FAQ</a>
+        <a href="./contatti.html" class="transition hover:text-red-300">Contatti</a>
       </nav>
     </div>
   </header>
@@ -106,12 +106,12 @@
               <div>
                 <label class="block mb-2 font-semibold text-red-500">Nome e Cognome</label>
                 <input type="text" id="fullName" placeholder="Mario Rossi"
-                  class="w-full p-3 text-white bg-black border border-red-500 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
+                  class="w-full p-3 text-white bg-black border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
               </div>
               <div>
                 <label class="block mb-2 font-semibold text-red-500">Email</label>
                 <input type="email" id="email" placeholder="mario@email.it"
-                  class="w-full p-3 text-white bg-black border border-red-500 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
+                  class="w-full p-3 text-white bg-black border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
               </div>
             </div>
 
@@ -119,14 +119,14 @@
             <div>
               <label class="block mb-2 font-semibold text-red-500">Telefono</label>
               <input type="tel" id="phone" placeholder="+39 333 000 0000"
-                class="w-full p-3 text-white bg-black border border-red-500 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
+                class="w-full p-3 text-white bg-black border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
             </div>
 
             <!-- Stanza -->
             <div>
               <label class="block mb-2 font-semibold text-red-500">Seleziona Stanza</label>
               <select id="roomSelect"
-                class="w-full p-3 text-white bg-black border border-red-500 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
+                class="w-full p-3 text-white bg-black border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
                 <option value="">-- Scegli la tua stanza --</option>
                 <option value="clown" data-price="30">Il Clown - Survival Horror (€30/pp)</option>
                 <option value="signore-oscuro" data-price="25">Il Signore Oscuro - Fantasy (€25/pp)</option>
@@ -139,13 +139,13 @@
               <div>
                 <label class="block mb-2 font-semibold text-red-500">Data</label>
                 <input type="text" id="bookingDate" placeholder="Seleziona una data"
-                  class="w-full p-3 text-white bg-black border border-red-500 rounded cursor-pointer focus:outline-none focus:ring-2 focus:ring-red-600"
+                  class="w-full p-3 text-white bg-black border border-gray-700 rounded cursor-pointer focus:outline-none focus:ring-2 focus:ring-red-600"
                   readonly>
               </div>
               <div>
                 <label class="block mb-2 font-semibold text-red-500">Fascia Oraria</label>
                 <select id="timeSlot"
-                  class="w-full p-3 text-white bg-black border border-red-500 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
+                  class="w-full p-3 text-white bg-black border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
                   <option value="">-- Seleziona --</option>
                   <option value="18:00">18:00</option>
                   <option value="20:00">20:00</option>
@@ -158,7 +158,7 @@
             <div>
               <label class="block mb-2 font-semibold text-red-500">Numero Giocatori</label>
               <input type="number" id="playerCount" min="2" max="10" value="2"
-                class="w-full p-3 text-white bg-black border border-red-500 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
+                class="w-full p-3 text-white bg-black border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
               <p class="mt-2 text-sm text-gray-400"><i class="mr-1 text-red-700 fa-solid fa-percent"></i>Sconto del 20%
                 applicato per gruppi di 4 o più persone!</p>
             </div>
@@ -167,11 +167,11 @@
             <div>
               <label class="block mb-2 font-semibold text-red-500">Note (opzionale)</label>
               <textarea id="notes" rows="3" placeholder="Compleanni, allergie, richieste speciali..."
-                class="w-full p-3 text-white bg-black border border-red-500 rounded resize-none focus:outline-none focus:ring-2 focus:ring-red-600"></textarea>
+                class="w-full p-3 text-white bg-black border border-gray-700 rounded resize-none focus:outline-none focus:ring-2 focus:ring-red-600"></textarea>
             </div>
 
             <!-- Totale -->
-            <div class="p-4 text-center bg-black border border-gray-700 rounded">
+            <div class="p-4 text-center border rounded border-red-900/60 bg-gradient-to-br from-red-950/40 to-black">
               <p class="text-sm text-gray-400">Totale Stimato</p>
               <p id="totalPrice" class="mt-1 text-4xl font-bold neon-text font-cinzel-dec">€0.00</p>
               <p id="discountNote" class="hidden mt-1 text-sm text-green-400"><i class="mr-1"></i>Sconto gruppo 20%
@@ -269,12 +269,12 @@
               <div>
                 <label class="block mb-2 font-semibold text-red-500">Il tuo nome</label>
                 <input type="text" id="gcSenderName" placeholder="Mario Rossi"
-                  class="w-full p-3 text-white bg-black border border-red-500 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
+                  class="w-full p-3 text-white bg-black border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
               </div>
               <div>
                 <label class="block mb-2 font-semibold text-red-500">La tua email</label>
                 <input type="email" id="gcSenderEmail" placeholder="mario@email.it"
-                  class="w-full p-3 text-white bg-black border border-red-500 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
+                  class="w-full p-3 text-white bg-black border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
               </div>
             </div>
 
@@ -283,12 +283,12 @@
               <div>
                 <label class="block mb-2 font-semibold text-red-500">Nome destinatario</label>
                 <input type="text" id="gcRecipientName" placeholder="Giulia Bianchi"
-                  class="w-full p-3 text-white bg-black border border-red-500 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
+                  class="w-full p-3 text-white bg-black border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
               </div>
               <div>
                 <label class="block mb-2 font-semibold text-red-500">Email destinatario</label>
                 <input type="email" id="gcRecipientEmail" placeholder="giulia@email.it"
-                  class="w-full p-3 text-white bg-black border border-red-500 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
+                  class="w-full p-3 text-white bg-black border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
               </div>
             </div>
 
@@ -296,11 +296,11 @@
             <div>
               <label class="block mb-2 font-semibold text-red-500">Messaggio personale (opzionale)</label>
               <textarea id="gcMessage" rows="3" placeholder="Un pensiero per il destinatario..."
-                class="w-full p-3 text-white bg-black border border-red-500 rounded resize-none focus:outline-none focus:ring-2 focus:ring-red-600"></textarea>
+                class="w-full p-3 text-white bg-black border border-gray-700 rounded resize-none focus:outline-none focus:ring-2 focus:ring-red-600"></textarea>
             </div>
 
             <!-- Totale -->
-            <div class="p-4 text-center bg-black border border-gray-700 rounded">
+            <div class="p-4 text-center rounded border border-red-900/60 bg-gradient-to-br from-red-950/40 to-black">
               <p class="text-sm text-gray-400">Importo Gift Card</p>
               <p id="gcTotalDisplay" class="mt-1 text-4xl font-bold neon-text">€50</p>
             </div>
@@ -383,6 +383,7 @@
           <li><a href="./prenotazione.html" class="transition hover:text-red-400">Prenota</a></li>
           <li><a href="./classifica.html" class="transition hover:text-red-400">Classifica</a></li>
           <li><a href="./faq.html" class="transition hover:text-red-400">FAQ</a></li>
+          <li><a href="./contatti.html" class="transition hover:text-red-400">Contatti</a></li>
         </ul>
       </div>
       <div>

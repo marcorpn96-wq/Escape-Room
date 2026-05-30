@@ -11,8 +11,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css" />
   <link rel="stylesheet" href="/Escape-Room/shared.css" />
   <title>Classifica - Secret Room Pescara</title>
-  <script type="module" crossorigin src="/Escape-Room/assets/main-PSm0kjCT.js"></script>
-  <link rel="stylesheet" crossorigin href="/Escape-Room/assets/main-CxYy2T0y.css">
+  <script type="module" crossorigin src="/Escape-Room/assets/main-DeD9VK5d.js"></script>
+  <link rel="stylesheet" crossorigin href="/Escape-Room/assets/main-_6_6xFfU.css">
 </head>
 
 <body class="overflow-x-hidden text-white bg-black">
@@ -41,7 +41,7 @@
         </div>
         <a href="./prenotazione.html" class="transition hover:text-red-300">Prenotazione</a>
         <a href="./classifica.html" class="text-white transition hover:text-red-300">Classifica</a>
-        <a href="./faq.html" class="transition hover:text-red-300">FAQ</a>
+        <a href="./contatti.html" class="transition hover:text-red-300">Contatti</a>
       </nav>
       <button class="text-2xl text-red-500 md:hidden"
         onclick="document.getElementById('mob-menu').classList.toggle('hidden')">
@@ -62,7 +62,7 @@
           Nun</a>
         <a href="./prenotazione.html" class="transition hover:text-red-300">Prenotazione</a>
         <a href="./classifica.html" class="transition hover:text-red-300">Classifica</a>
-        <a href="./faq.html" class="transition hover:text-red-300">FAQ</a>
+        <a href="./contatti.html" class="transition hover:text-red-300">Contatti</a>
       </nav>
     </div>
   </header>
@@ -87,12 +87,12 @@
           <div>
             <label class="block mb-2 text-sm text-red-400">Nome Team</label>
             <input type="text" id="teamName" placeholder="Nome del vostro gruppo"
-              class="w-full p-3 text-white bg-black border border-red-500 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
+              class="w-full p-3 text-white bg-black border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
           </div>
           <div>
             <label class="block mb-2 text-sm text-red-400">Stanza</label>
             <select id="scoreRoom"
-              class="w-full p-3 text-white bg-black border border-red-500 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
+              class="w-full p-3 text-white bg-black border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
               <option value="">-- Seleziona --</option>
               <option value="Il Clown">Il Clown</option>
               <option value="Il Signore Oscuro">Il Signore Oscuro</option>
@@ -102,12 +102,12 @@
           <div>
             <label class="block mb-2 text-sm text-red-400">Tempo impiegato (minuti)</label>
             <input type="number" id="teamTime" min="1" max="60" placeholder="es. 47"
-              class="w-full p-3 text-white bg-black border border-red-500 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
+              class="w-full p-3 text-white bg-black border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
           </div>
           <div>
             <label class="block mb-2 text-sm text-red-400">Data sessione</label>
             <input type="text" id="sessionDate" placeholder="Seleziona una data"
-              class="w-full p-3 text-white bg-black border border-red-500 rounded cursor-pointer focus:outline-none focus:ring-2 focus:ring-red-600" readonly>
+              class="w-full p-3 text-white bg-black border border-gray-700 rounded cursor-pointer focus:outline-none focus:ring-2 focus:ring-red-600" readonly>
           </div>
           <div class="flex items-start gap-2 md:col-span-2">
             <input type="checkbox" id="privacyScore" class="mt-1 cursor-pointer accent-red-600">
@@ -127,7 +127,7 @@
         <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
           <h2 class="text-xl font-bold text-red-500">Classifica Completa</h2>
           <select id="filterRoom" onchange="renderLeaderboard()"
-            class="p-2 text-sm text-white bg-black border border-red-500 rounded focus:outline-none">
+            class="p-2 text-sm text-white bg-black border border-gray-700 rounded focus:outline-none">
             <option value="all">Tutte le stanze</option>
             <option value="Il Clown">Il Clown</option>
             <option value="Il Signore Oscuro">Il Signore Oscuro</option>
@@ -174,6 +174,7 @@
           <li><a href="./prenotazione.html" class="transition hover:text-red-400">Prenota</a></li>
           <li><a href="./classifica.html" class="transition hover:text-red-400">Classifica</a></li>
           <li><a href="./faq.html" class="transition hover:text-red-400">FAQ</a></li>
+          <li><a href="./contatti.html" class="transition hover:text-red-400">Contatti</a></li>
         </ul>
       </div>
       <div>

@@ -4,10 +4,9 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/Escape-Room/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="/Escape-Room/shared.css" />
-  <title>Le Stanze - Secret Room Pescara</title>
+  <title>Contatti - Secret Room Pescara</title>
   <script type="module" crossorigin src="/Escape-Room/assets/main-DeD9VK5d.js"></script>
   <link rel="stylesheet" crossorigin href="/Escape-Room/assets/main-_6_6xFfU.css">
 </head>
@@ -20,7 +19,7 @@
       <nav class="hidden gap-6 font-semibold text-red-500 md:flex">
         <a href="./" class="transition hover:text-red-300">Home</a>
         <div class="relative group">
-          <a href="./stanze.html" class="flex items-center gap-1 text-white transition hover:text-red-300">Stanze <i class="text-xs fa-solid fa-chevron-down opacity-60"></i></a>
+          <a href="./stanze.html" class="flex items-center gap-1 transition hover:text-red-300">Stanze <i class="text-xs fa-solid fa-chevron-down opacity-60"></i></a>
           <div class="absolute left-0 z-50 hidden min-w-[190px] py-1 bg-black border border-red-900 rounded top-full group-hover:flex flex-col">
             <a href="./stanze.html" class="px-4 py-2 text-sm font-semibold transition border-b border-red-900 hover:bg-gray-900 hover:text-red-300">Tutte le Stanze</a>
             <a href="./scheda-stanza-clown.html" class="px-4 py-2 text-sm transition hover:bg-gray-900 hover:text-red-300">Il Clown</a>
@@ -30,7 +29,7 @@
         </div>
         <a href="./prenotazione.html" class="transition hover:text-red-300">Prenotazione</a>
         <a href="./classifica.html" class="transition hover:text-red-300">Classifica</a>
-        <a href="./contatti.html" class="transition hover:text-red-300">Contatti</a>
+        <a href="./contatti.html" class="text-white transition hover:text-red-300">Contatti</a>
       </nav>
       <button class="text-2xl text-red-500 md:hidden" onclick="document.getElementById('mob-menu').classList.toggle('hidden')">
         <i class="fa-solid fa-bars"></i>
@@ -57,102 +56,127 @@
     <section class="relative flex items-center justify-center w-full h-64 overflow-hidden">
       <img src="/Escape-Room/img/Escape-Room.jpg" alt="" class="absolute inset-0 object-cover w-full h-full opacity-20">
       <div class="relative z-10 px-4 text-center">
-        <p class="mb-2 text-sm tracking-widest text-red-500 uppercase font-cinzel-dec">Scegli la tua avventura</p>
-        <h1 class="text-5xl font-bold md:text-6xl neon-text">Le Nostre Stanze</h1>
+        <p class="mb-2 text-sm tracking-widest text-red-500 uppercase font-cinzel-dec">Siamo qui per te</p>
+        <h1 class="text-5xl font-bold md:text-6xl neon-text">Contattaci</h1>
       </div>
     </section>
 
-    <!-- INTRO -->
-    <section class="max-w-3xl px-4 py-12 mx-auto text-center">
-      <p class="text-lg leading-relaxed text-gray-300">Tre esperienze uniche, tre livelli di terrore. Ogni stanza è costruita con scenografie cinematografiche, attori dal vivo e misteri da svelare. Hai il coraggio di entrare?</p>
+    <!-- INFO CARDS -->
+    <section class="max-w-5xl px-4 py-16 mx-auto">
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="flex flex-col items-center gap-3 p-6 text-center bg-gray-900 border border-red-900 rounded-lg">
+          <i class="text-3xl text-red-600 fa-solid fa-location-dot"></i>
+          <h4 class="font-bold text-white">Dove siamo</h4>
+          <p class="text-sm text-gray-300">Via Roma 42<br>65100 Pescara PE</p>
+        </div>
+        <div class="flex flex-col items-center gap-3 p-6 text-center bg-gray-900 border border-red-900 rounded-lg">
+          <i class="text-3xl text-red-600 fa-solid fa-phone"></i>
+          <h4 class="font-bold text-white">Telefono</h4>
+          <a href="tel:+390850000000" class="text-sm text-gray-300 transition hover:text-red-400">+39 085 000 0000</a>
+        </div>
+        <div class="flex flex-col items-center gap-3 p-6 text-center bg-gray-900 border border-red-900 rounded-lg">
+          <i class="text-3xl text-red-600 fa-solid fa-envelope"></i>
+          <h4 class="font-bold text-white">Email</h4>
+          <a href="mailto:info@secretroom.it" class="text-sm text-gray-300 transition hover:text-red-400">info@secretroom.it</a>
+        </div>
+        <div class="flex flex-col items-center gap-3 p-6 text-center bg-gray-900 border border-red-900 rounded-lg">
+          <i class="text-3xl text-red-600 fa-regular fa-clock"></i>
+          <h4 class="font-bold text-white">Orari</h4>
+          <p class="text-sm text-gray-300">Lun–Dom<br>15:00 – 23:00</p>
+        </div>
+      </div>
     </section>
 
-    <!-- CARD -->
-    <section class="px-8 py-8 mx-auto max-w-7xl">
-      <div class="grid grid-cols-1 gap-12 cursor-pointer lg:grid-cols-3">
+    <!-- FORM + MAP -->
+    <section class="max-w-5xl px-4 pb-20 mx-auto">
+      <div class="grid grid-cols-1 gap-10 lg:grid-cols-2">
 
-        <!-- il clown -->
-        <div class="relative flex flex-col overflow-hidden bg-gray-900 rounded-lg neon-border group">
-          <a href="./scheda-stanza-clown.html" class="absolute inset-0 z-0"></a>
-          <div class="relative overflow-hidden h-80">
-            <img src="/Escape-Room/img/stanze/clown/il-clown.jpg" alt="Il Clown"
-              class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105" style="object-position: center 35%;">
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-            <span class="absolute text-xs tracking-widest text-red-400 uppercase bottom-4 left-4">Survival Horror</span>
-          </div>
-          <div class="flex flex-col flex-1 p-6">
-            <h3 class="mb-1 text-3xl font-bold text-red-600">Il Clown</h3>
-            <div class="flex gap-4 mb-4 text-sm text-gray-400">
-              <span><i class="text-red-700 fa-solid fa-star"></i> ★★★★★</span>
-              <span><i class="text-red-700 fa-solid fa-users"></i> 2-10</span>
-              <span><i class="text-red-700 fa-solid fa-euro-sign"></i> 30/pp</span>
+        <!-- FORM -->
+        <div>
+          <h2 class="mb-6 text-2xl font-bold text-red-500">Inviaci un messaggio</h2>
+
+          <form id="contactForm" class="space-y-4" novalidate>
+
+            <div>
+              <label class="block mb-1 text-sm text-gray-400" for="contactName">Nome e Cognome</label>
+              <input id="contactName" type="text" placeholder="Mario Rossi"
+                class="w-full px-4 py-3 text-white bg-gray-900 border border-gray-700 rounded focus:outline-none focus:border-red-500" />
             </div>
-            <p class="mb-6 text-sm leading-relaxed text-gray-300">Il Clown è tornato e questa volta vuole giocare con voi. Due capitoli da 60 minuti nella casa maledetta più grande di Pescara.</p>
-            <div class="flex flex-col gap-3 mt-auto sm:flex-row">
-              <a href="./scheda-stanza-clown.html" class="relative z-10 flex-1 px-4 py-2 font-bold text-center text-white transition bg-red-700 rounded hover:bg-red-600">Scopri di più</a>
-              <a href="./prenotazione.html?stanza=clown" class="relative z-10 flex-1 px-4 py-2 font-bold text-center text-red-500 transition border-2 border-red-700 rounded hover:bg-red-700 hover:text-white">Prenota</a>
+
+            <div>
+              <label class="block mb-1 text-sm text-gray-400" for="contactEmail">Email</label>
+              <input id="contactEmail" type="email" placeholder="mario@esempio.it"
+                class="w-full px-4 py-3 text-white bg-gray-900 border border-gray-700 rounded focus:outline-none focus:border-red-500" />
             </div>
+
+            <div>
+              <label class="block mb-1 text-sm text-gray-400" for="contactSubject">Oggetto</label>
+              <select id="contactSubject"
+                class="w-full px-4 py-3 text-white bg-gray-900 border border-gray-700 rounded focus:outline-none focus:border-red-500">
+                <option value="">Seleziona un oggetto</option>
+                <option value="info">Informazioni generali</option>
+                <option value="prenotazione">Prenotazione / Disponibilità</option>
+                <option value="gruppi">Gruppi ed eventi privati</option>
+                <option value="altro">Altro</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block mb-1 text-sm text-gray-400" for="contactMessage">Messaggio</label>
+              <textarea id="contactMessage" rows="5" placeholder="Scrivi qui il tuo messaggio..."
+                class="w-full px-4 py-3 text-white bg-gray-900 border border-gray-700 rounded resize-none focus:outline-none focus:border-red-500"></textarea>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <input id="contactPrivacy" type="checkbox" class="mt-1 accent-red-600 cursor-pointer" />
+              <label for="contactPrivacy" class="text-sm text-gray-400 cursor-pointer">
+                Ho letto e accetto la <a href="#" class="text-red-400 underline hover:text-red-300">Privacy Policy</a>
+              </label>
+            </div>
+
+            <button type="submit"
+              class="w-full py-3 font-bold text-white transition bg-red-700 rounded hover:bg-red-600">
+              <i class="mr-2 fa-solid fa-paper-plane"></i> Invia messaggio
+            </button>
+
+          </form>
+
+          <div id="contactConfirmBox" class="hidden p-6 mt-4 text-center bg-gray-900 border border-red-900 rounded-lg">
+            <i class="mb-3 text-4xl text-red-500 fa-solid fa-envelope-circle-check"></i>
+            <h3 class="mb-2 text-xl font-bold text-white">Messaggio inviato!</h3>
+            <p id="contactConfirmText" class="text-sm text-gray-300"></p>
           </div>
         </div>
 
-        <!-- il signore oscuro -->
-        <div class="relative flex flex-col overflow-hidden bg-gray-900 rounded-lg neon-border group">
-          <a href="./scheda-stanza-signore-oscuro.html" class="absolute inset-0 z-0"></a>
-          <div class="relative overflow-hidden h-80">
-            <img src="/Escape-Room/img/stanze/il-signore-oscuro/il-signore-oscuro.jpg" alt="Il Signore Oscuro"
-              class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105" style="object-position: center 35%;">
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-            <span class="absolute text-xs tracking-widest text-red-400 uppercase bottom-4 left-4">Fantasy</span>
+        <!-- MAP + SOCIAL -->
+        <div class="flex flex-col gap-6">
+          <div class="overflow-hidden border border-red-900 rounded-lg h-72">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2943.0234130140284!2d14.205482176678291!3d42.46979072816117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1331a66f739eba8b%3A0x54d481e905c1273a!2sVia%20Roma%2C%2042%2C%2065122%20Pescara%20PE!5e0!3m2!1sit!2sit!4v1780140261174!5m2!1sit!2sit"
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" title="Secret Room Pescara - Mappa"></iframe>
           </div>
-          <div class="flex flex-col flex-1 p-6">
-            <h3 class="mb-1 text-3xl font-bold text-red-600">Il Signore Oscuro</h3>
-            <div class="flex gap-4 mb-4 text-sm text-gray-400">
-              <span><i class="text-red-700 fa-solid fa-star"></i> ★★★★☆</span>
-              <span><i class="text-red-700 fa-solid fa-users"></i> 2-8</span>
-              <span><i class="text-red-700 fa-solid fa-euro-sign"></i> 25/pp</span>
-            </div>
-            <p class="mb-6 text-sm leading-relaxed text-gray-300">Un nuovo anno alla scuola di magia, una missione dal mago più temuto di tutti i tempi. Riuscirete a diventare Maghi del Male?</p>
-            <div class="flex flex-col gap-3 mt-auto sm:flex-row">
-              <a href="./scheda-stanza-signore-oscuro.html" class="relative z-10 flex-1 px-4 py-2 font-bold text-center text-white transition bg-red-700 rounded hover:bg-red-600">Scopri di più</a>
-              <a href="./prenotazione.html?stanza=signore-oscuro" class="relative z-10 flex-1 px-4 py-2 font-bold text-center text-red-500 transition border-2 border-red-700 rounded hover:bg-red-700 hover:text-white">Prenota</a>
-            </div>
-          </div>
-        </div>
 
-        <!-- the nun -->
-        <div class="relative flex flex-col overflow-hidden bg-gray-900 rounded-lg neon-border group">
-          <a href="./scheda-stanza-suora.html" class="absolute inset-0 z-0"></a>
-          <div class="relative overflow-hidden h-80">
-            <img src="/Escape-Room/img/stanze/la-suora/la-suora.jpg" alt="The Nun"
-              class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105" style="object-position: center 35%;">
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-            <span class="absolute text-xs tracking-widest text-red-400 uppercase bottom-4 left-4">Horror</span>
+          <div class="p-6 bg-gray-900 border border-red-900 rounded-lg">
+            <h4 class="mb-4 font-bold text-red-500 uppercase">Seguici sui social</h4>
+            <div class="flex gap-5 text-3xl">
+              <a href="#" class="text-gray-300 transition hover:text-red-400"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="text-gray-300 transition hover:text-red-400"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#" class="text-gray-300 transition hover:text-red-400"><i class="fa-brands fa-tiktok"></i></a>
+              <a href="#" class="text-gray-300 transition hover:text-red-400"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
           </div>
-          <div class="flex flex-col flex-1 p-6">
-            <h3 class="mb-1 text-3xl font-bold text-red-600">The Nun</h3>
-            <div class="flex gap-4 mb-4 text-sm text-gray-400">
-              <span><i class="text-red-700 fa-solid fa-star"></i> ★★★★☆</span>
-              <span><i class="text-red-700 fa-solid fa-users"></i> 2-6</span>
-              <span><i class="text-red-700 fa-solid fa-euro-sign"></i> 20/pp</span>
-            </div>
-            <p class="mb-6 text-sm leading-relaxed text-gray-300">Un'antica abbazia, un mistero da svelare, un male che non vuole essere disturbato. Siete stati scelti dal Vaticano per indagare.</p>
-            <div class="flex flex-col gap-3 mt-auto sm:flex-row">
-              <a href="./scheda-stanza-suora.html" class="relative z-10 flex-1 px-4 py-2 font-bold text-center text-white transition bg-red-700 rounded hover:bg-red-600">Scopri di più</a>
-              <a href="./prenotazione.html?stanza=suora" class="relative z-10 flex-1 px-4 py-2 font-bold text-center text-red-500 transition border-2 border-red-700 rounded hover:bg-red-700 hover:text-white">Prenota</a>
-            </div>
+
+          <div class="p-6 bg-gray-900 border border-red-900 rounded-lg">
+            <h4 class="mb-2 font-bold text-white">Hai una domanda frequente?</h4>
+            <p class="mb-4 text-sm text-gray-400">Controlla le nostre FAQ prima di scrivere: potresti trovare subito la risposta che cerchi.</p>
+            <a href="./faq.html" class="inline-flex items-center gap-2 px-5 py-2 font-bold text-red-500 transition border-2 border-red-700 rounded hover:bg-red-700 hover:text-white">
+              <i class="fa-solid fa-circle-question"></i> Vai alle FAQ
+            </a>
           </div>
         </div>
 
       </div>
-    </section>
-
-    <!-- pulsante -->
-    <section class="px-4 py-20 text-center">
-      <h2 class="mb-4 text-3xl font-bold neon-text">Non sai quale scegliere?</h2>
-      <p class="mb-8 text-gray-400">Chiamaci e ti aiuteremo a trovare l'esperienza perfetta per il tuo gruppo.</p>
-      <a href="tel:+390850000000" class="inline-block px-10 py-4 text-xl font-bold text-white transition bg-red-700 rounded hover:bg-red-600">
-        <i class="mr-2 fa-solid fa-phone"></i> Chiamaci Ora
-      </a>
     </section>
 
   </main>
